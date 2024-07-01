@@ -11,7 +11,7 @@ import { errorMiddleware } from './middlewares/errorMiddleware.js';
 const app=express();
 config({path:"./config/config.env"});
 app.use(cors({
-    origin:['http://localhost:5173','http://localhost:5173'],
+    origin:[process.env.FRONTENED_URL,process.env.DASHBOARD_URL],
     methods:["GET","POST","PUT","DELETE"],
     credentials:true,
 }));
