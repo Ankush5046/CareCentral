@@ -38,7 +38,7 @@ const AppointmentForm = () => {
         { withCredentials: true }
       );
       setDoctors(data.doctors);
-      //console.log(data.doctors);
+     // console.log(data.doctors);
     };
     fetchDoctors();
   }, []);
